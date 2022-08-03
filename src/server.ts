@@ -1,10 +1,10 @@
-import config from "config";
+import "dotenv/config";
 import http from "http";
 import connect from "./utils/connectDb";
 
 import app from "./app";
 
-const PORT = config.get<number>("port");
+const PORT = process.env.PORT || 5000;
 const server = http.createServer(app);
 
 const launchServer = async function () {
