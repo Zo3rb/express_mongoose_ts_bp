@@ -1,6 +1,7 @@
 import "dotenv/config";
 import http from "http";
 import connect from "./utils/connectDb";
+import logger from "./utils/logger";
 
 import app from "./app";
 
@@ -10,11 +11,17 @@ const server = http.createServer(app);
 const launchServer = async function () {
   try {
     server.listen(PORT, () => {
-      console.log(`Server is Up & Running on PORT: ${PORT}`);
+      logger.log({
+        level: "info",
+        message: `Server is Up & Running on PORT: ${PORT}`,
+      });
     });
     connect();
   } catch (error) {
-    console.log(`Error Ocurred: ${error}`);
+    logger.log({
+      level: "error",
+      message: `\n\n Launching Server Error: ${error} \n\n`,
+    });
     process.exit(1);
   }
 };

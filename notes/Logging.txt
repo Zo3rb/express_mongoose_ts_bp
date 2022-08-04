@@ -1,0 +1,29 @@
+# Logging In Node.Js. 
+
+- What's Logging? 
+    * Recording for important information within the Application.
+
+- Logs Categories: Logs should be collected.
+    * Oauth & accessing.
+    * Changes (data as example).
+    * Availability (Application Status).
+    * Resources.
+    * Threats (Security).
+
+- Let's Order its.
+    * Availability, is the app is up or down?
+    * Oauth, Who's accessing and is accessed successfully.
+    * Changes, Data persistence.
+    * Resources.
+    * Threats.
+
+- Log Components?
+    * Context Information - الرسالة نفسها
+    * Timestamp - وقت اللوج
+    * Log Level (info, war, error, ...etc) - نوع اللوج.
+
+- Why Logging?
+    * Diagnostics.
+    * Auditing.
+
+- Quick Start to Winston && Winston-MongoDb Library.

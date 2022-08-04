@@ -10,10 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/winston": "^2.4.4",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoose": "^6.4.4",
+    "winston": "^3.8.1",
     "zod": "^3.17.3"
   },
   "devDependencies": {
